@@ -1,0 +1,28 @@
+{
+  "name": "payment-wall",
+  "version": "1.0.0",
+  "description": "Javascript based payment widget using PaymentWall's APIs",
+  "main": "index.js",
+  "scripts": {
+    "start": "gulp && http-serve -p 8005 ./dist/"
+  },
+  "repository": {
+    "type": "git"
+  },
+  "keywords": [
+    "paymentwall",
+    "payment",
+    "widget",
+    "js"
+  ],
+  "author": "Arunkumar Srisailapathi",
+  "license": "ISC",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-concat": "^2.6.1",
+    "gulp-copy": "^1.1.0",
+    "gulp-minify": "^2.1.0",
+    "gulp-uglifycss": "^1.0.9",
+    "http-serve": "^1.0.1"
+  }
+}

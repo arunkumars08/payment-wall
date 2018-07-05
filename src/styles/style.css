@@ -1,0 +1,282 @@
+body {
+    margin: 0;
+}
+
+.loader {
+    display: flex;
+    align-items: center;
+}
+
+.loader img {
+    width: 2rem;
+    margin: 0 auto;
+}
+
+.application {
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    background: #fafafa;
+    /* font-size: 38px; */
+    font-family: sans-serif;
+}
+
+.payment-container {
+    position: relative;
+    margin: 0 auto;
+    width: 70%;
+    height: auto;
+    background: #fff;
+    box-shadow: 1px 1px 2px 1px #ccc;
+}
+
+.payment-screens {
+    display: none;
+}
+
+.active-screen {
+    display: flex;
+    flex-direction: column;
+}
+
+.make-row {
+    flex: 1;
+    display: flex;
+}
+
+.payment-methods {
+    text-align: center;
+    padding: 0;
+}
+
+.payment-screen-list-item {
+    list-style-type: none;
+    display: inline-block;
+}
+
+.payment-screen-list-item:after {
+    content: '';
+    float: none;
+    clear: both;
+    display: block;
+}
+
+.payment-header {
+    height: 3rem;
+    line-height: 3rem;
+    padding-left: 2rem;
+    position: relative;
+    background: #75B8E5;
+    color: #fff;
+    font-weight: 100;
+    font-size: 1.2rem;
+}
+
+.back-arrow:after {
+    content: '';
+    display: block;
+    width: 10px;
+    height: 10px;
+    border: 5px solid #fff;
+    border-right-width: 0;
+    border-bottom-width: 0;
+    margin-left: 10px;
+    transform: rotate(-45deg);
+}
+
+.payment-icon-container {
+    float: left;
+    text-align: center;
+    font-size: 1rem;
+    line-height: 1rem;
+    box-shadow: 1px 1px 1px 1px #ccc;
+    margin: 0.5rem;
+    max-width: 20rem;
+    min-width: 20rem;
+    padding: 0.5rem;
+    font-weight: 100;
+    color: #999;
+    cursor: pointer;
+    position: relative;
+}
+
+.selected-method .payment-icon-container {
+    box-shadow: 1px 1px 5px 4px #75B8E5;
+}
+
+.payment-icon {
+    width: 5rem;
+}
+
+.form-label {
+    display: block;
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    color: #555;
+    font-weight: 100;
+}
+.form-input {
+    height: 2rem;
+    font-size: 1.5rem;
+    font-weight: 100;
+    outline: none;
+}
+.form-input-lg {
+    width: 70%;
+}
+.credit-numbers {
+    margin-right: 0.4rem;
+}
+.align-center {
+    text-align: center;
+}
+.form-input-md {
+    width: 15%;
+}
+.full-view {
+    margin: 1rem 0;
+}
+.full-view:after {
+    content: '';
+    clear: both;
+    float: none;
+    display: block;
+}
+
+.split-view {
+    width: 50%;
+    float: left;
+}
+.float-left {
+    float: left;
+}
+
+.expiration {
+    margin-right: 1rem;
+}
+
+.form-input-md {
+    width: 40%;
+}
+
+.card-fill {
+    padding: 0 0 0 2rem;
+}
+
+.payment-btn {
+    width: 50%;
+    background: #D6B545;
+    border: 0;
+    outline: none;
+    text-align: center;
+    color: #fff;
+    font-size: 1rem;
+    margin: 1rem auto 0;
+    height: 2rem;
+    cursor: pointer;
+}
+.payment-btn:hover {
+    box-shadow: 1px 1px 1px 1px #aaa;
+}
+
+.preview-credit-card {
+    width: 90%;
+    background: #000;
+    height: 10rem;
+    color: #FFD700;
+    text-shadow: 2px 2px 2px #aaa;
+    border-radius: 0.6rem;
+    box-shadow: 3px 3px 1px 1px #999;
+}
+
+.card-header {
+    height: 4rem;
+    position: relative;
+}
+.credit-card-head-name {
+    color: #ccc;
+    float: right;
+    margin-top: 1rem;
+    margin-right: 1rem;
+}
+.card-number {
+    text-align: center;
+    font-size: 1.5rem;
+}
+.card-expiration, .card-name {
+    margin: 0.5rem 2.2rem;
+}
+.card-name {
+    text-transform: uppercase;
+}
+
+.payment-message-banner {
+    position: absolute;
+    width: 100%;
+    height: 3rem;
+    bottom: 0;
+    line-height: 3rem;
+    text-align: center;
+    color: #fff;
+    font-size: 1.5rem;
+    font-weight: 100;
+}
+
+.hide {
+    display: none;
+}
+
+.success-banner {
+    background: GREEN;
+}
+
+.error-banner {
+    background: RED;
+}
+
+.payment-message {
+    font-size: 0.7rem;
+    font-weight: 100;
+}
+
+.error {
+    color: RED;
+}
+
+@media (min-width: 250px) and (max-width: 575px) {
+    .card-fill {
+        width: 100%;
+    }
+    .preview-card-area {
+        display: none;
+    }
+    .payment-container {
+        width: 100%;
+    }
+}
+
+@media (min-width: 576px) and (max-width: 767px) {
+    .card-fill {
+        width: 100%;
+    }
+    .preview-card-area {
+        display: none;
+    }
+    .payment-container {
+        width: 100%;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    .payment-container {
+        width: 100%;
+    }
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+    .payment-container {
+        width: 80%;
+    }
+}

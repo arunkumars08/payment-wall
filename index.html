@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Payment Widget</title>
+    <link href="css/style.css" rel="stylesheet" type="text/css" media="screen" />
+</head>
+
+<body>
+    <section class="application">
+        <section class="payment-container" role="application">
+            <article class="payment-header">
+                <span class="back-arrow"></span>
+                <span class="payment-title"></span>
+            </article>
+            <article class="payment-screens" role="article">
+                <div class="loader">
+                    <img src="loader.gif" />
+                </div>
+                <ul class="payment-methods"></ul>
+            </article>
+            <article class="payment-screens full-view" role="article">
+                <div class="make-row">
+                    <div class="split-view card-fill">
+                        <form>
+                            <div class="full-view">
+                                <label class="form-label" for="cardHolderName">Card Holder Name</label>
+                                <input pay-model="name" placeholder="John Doe" class="form-input form-input-lg" type="text" value="" id="cardHolderName" />
+                            </div>
+                            <div class="full-view">
+                                <label class="form-label" for="cardNumber">Card Number</label>
+                                <input pay-model="number" maxlength="16" class="form-input form-input-lg credit-numbers align-center" type="text" placeholder="xxxx xxxx xxxx xxxx"
+                                    value="" id="cardNumber" />
+                            </div>
+                            <div class="full-view">
+                                <div class="float-left form-input-md expiration">
+                                    <label class="form-label" for="expDateMonth">Expiration Date</label>
+                                    <input pay-model="expm" class="form-input form-input-md align-center" type="text" value="" id="expDateMonth" maxlength="2" placeholder="MM" /> /
+                                    <input pay-model="expy" class="form-input form-input-md align-center" type="text" value="" id="expDateYear" maxlength="2" placeholder="YY" />
+                                </div>
+                                <div class="float-left form-input-md">
+                                    <label class="form-label" for="cvv">CVV</label>
+                                    <input class="form-input form-input-md align-center" type="password" value="" id="cvv" maxlength="3" placeholder="123" />
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="split-view preview-card-area">
+                        <div class="preview-credit-card">
+                            <div class="card-header">
+                                <span class="credit-card-head-name">CREDIT CARD</span>
+                            </div>
+                            <div class="card-number" plis-number>
+                                XXXX&emsp;&emsp;XXXX&emsp;&emsp;XXXX&emsp;&emsp;XXXX
+                            </div>
+                            <div class="card-expiration">
+                                <span plis-expm>MM</span> / 
+                                <span plis-expy>YY</span>
+                            </div>
+                            <div class="card-name" plis-name>CARDHOLDER NAME</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="make-row">
+                    <div class="payment-message-banner hide"></div>
+                    <button class="payment-btn" id="paymentBtn"></button>
+                </div>
+            </article>
+        </section>
+    </section>
+    <script type="text/javascript" src="js/script.js"></script>
+    <template id="paymentMethod">
+        <li class="payment-screen-list-item">
+            <figure class="payment-icon-container" aria-label="payment icon" role="figure">
+                <img role="img" class="payment-icon" />
+                <figcaption></figcaption>
+            </figure>
+        </li>
+    </template>
+</body>
+
+</html>
